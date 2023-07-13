@@ -1201,13 +1201,19 @@ get_ascii() {
 
         ([Bb]arg[Oo][Ss]*)
             read_ascii 2 <<-EOF
-${c2}      .=.      
-${c2}     .-.=.     
-${c2}   -:=. .=:-.  
-${c2}   ==:==--==   
-${c2}  :=-::+=..-:  
-${c2} -=.   .+   -: 
-${c2}--      :=-::+-
+${c2}             =-             
+${c2}            =+*-            
+${c2}           += .*-           
+${c2}          +=    *=          
+${c2}     ..::==      +-.:..     
+${c2}     =*+-=++-  :===-=*+     
+${c2}      -+-. :++:-: .-+-      
+${c2}     .=.-+=--**--++--=      
+${c2}    .*+==-:::-*+:.   -*.    
+${c2}   :**=:.     +*      -*.   
+${c2}  :*=.        .*=      :*:  
+${c2} :*:           :++:.    :*: 
+${c2}-*.              :=+++++=**:
 			EOF
         ;;
 
@@ -1926,7 +1932,7 @@ EOF
         # Disable globbing and set the positional parameters to the
         # contents of 'PF_INFO'.
         set -f
-        set +f -- ${PF_INFO-ascii title os host kernel uptime pkgs memory}
+        set +f -- ${PF_INFO-ascii title os host kernel uptime pkgs memory shell editor wm de palette}
 
         # Iterate over the info functions to determine the lengths of the
         # "info names" for output alignment. The option names and subtitles
